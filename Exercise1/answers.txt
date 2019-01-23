@@ -1,0 +1,20 @@
+Concurrency is when two or more tasks can start, run and complete in overlapping time periods. Tasks can be interrupted so they 
+dont necessairly run at the same instant(multitasking). Parallelism is when tasks literally run at the same time, like on a multicore 
+processor.
+
+It increases overall speed/efficiency for programs as it can run miltiple instructions at the same time. 
+
+Any problems where multiple things are happening at the same time.
+
+Situations that require concurrency are easier to solve, but adds more complexity to the system and new problems arise. 
+
+Process run in seperate memory space, threads in shared. Standard threads are scheduled by the operating system. Green threads by a 
+virtual machine. Coroutines are routines that can run for a while, return control to another routine, then run from where they left off.
+
+pthread_create() and threading.Thread() creates a thread, go creates a hybrid(?).  
+
+CPythons memory management is not thread-safe, thus the GIL is needed to prevent multiple threads from running the same bytecode.
+
+By using the multiprocessing package one can side-step the GIL by using subprocesses instead of threads.
+
+The GOMAXPROCS variable limits the number of operating system threads that can execute user-level Go code simultaneously.
